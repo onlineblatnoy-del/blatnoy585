@@ -18,8 +18,9 @@ include 'Telegram.php';
 include 'functions.php';
 
 $tg = new Telegram([
-	'token' => ""
+    'token' => getenv("BOT_TOKEN")
 ]);
+
 
 
 $updates = $tg->get_webhookUpdates();
